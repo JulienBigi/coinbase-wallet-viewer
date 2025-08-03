@@ -19,7 +19,9 @@ Coinbase Wallet Viewer is a React application that allows users to view their Co
 
 ## Coinbase API Setup
 
-1. Create a Coinbase Developer Account:
+
+In progress...
+<!-- 1. Create a Coinbase Developer Account:
    - Go to [Coinbase CDP Portal](https://portal.cdp.coinbase.com)
    - Sign in or create an account
    - Navigate to the Dashboard section
@@ -32,7 +34,7 @@ Coinbase Wallet Viewer is a React application that allows users to view their Co
    - Add IP address restrictions (recommended)
    - Save your credentials securely:
      - API Key
-     - API Secret
+     - API Secret -->
 
 3. Configure Environment Variables:
    ```bash
