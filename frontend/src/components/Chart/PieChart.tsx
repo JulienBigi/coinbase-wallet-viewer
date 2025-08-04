@@ -20,7 +20,7 @@ const PieChart: React.FC<WalletPieChartProps> = ({ wallet }) => {
     labels,
     datasets: [
       {
-        label: 'Balance par crypto',
+        label: 'Balance',
         data,
         backgroundColor: backgroundColor,
         borderColor: '#fff',
