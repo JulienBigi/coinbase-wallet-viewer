@@ -1,0 +1,25 @@
+:root[data-theme="light"] {
+  --background: #ffffff;
+  --text: #333333;
+  --primary: #4289cc;
+  --secondary: #0f44d9;
+  --accent: #05b169;
+  --border: #e5e7eb;
+  --card-bg: #f9fafb;
+}
+
+:root[data-theme="dark"] {
+  --background: #111827;
+  --text: #f3f4f6;
+  --primary: #4289cc;
+  --secondary: #0052ff;
+  --accent: #05b169;
+  --border: #374151;
+  --card-bg: #1f2937;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
