@@ -1,4 +1,5 @@
 import React from 'react';
+// @ts-expect-error ChartJS default export typing is broken
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import type { Accounts } from '../../types/account.types';
@@ -10,11 +11,13 @@ type WalletPieChartProps = {
 };
 
 const PieChart: React.FC<WalletPieChartProps> = ({ wallet }) => {
-  if (!wallet || !wallet.data || wallet.data.length === 0) return null;
+  if (!wallet?.data?.length) return null;
 
   const labels = wallet.data.map((acc) => acc.currency.code);
   const data = wallet.data.map((acc) => parseFloat(acc.balance.amount));
-  const backgroundColor = wallet.data.map((acc) => acc.currency.color || '#999');
+  const backgroundColor = wallet.data.map(
+    (acc) => acc.currency.color || '#999'
+  );
 
   const chartData = {
     labels,
@@ -22,7 +25,7 @@ const PieChart: React.FC<WalletPieChartProps> = ({ wallet }) => {
       {
         label: 'Balance',
         data,
-        backgroundColor: backgroundColor,
+        backgroundColor,
         borderColor: '#fff',
         borderWidth: 1,
       },
