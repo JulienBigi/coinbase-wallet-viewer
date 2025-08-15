@@ -1,5 +1,6 @@
 import React from 'react';
-// @ts-expect-error ChartJS default export typing is broken
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import type { Accounts } from '../../types/account.types';
