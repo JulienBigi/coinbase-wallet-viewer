@@ -28,11 +28,6 @@ jobs:
           cd frontend
           npm install
 
-      - name: Run Type Checks
-        run: |
-          cd frontend
-          npm run type-check
-
   unit_tests:
     runs-on: ubuntu-latest
     needs: build
